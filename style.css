@@ -1,154 +1,260 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    min-height:100vh;
-    background-image:url("images/background.png");
-    background-size:100%;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+/* Main page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background-image: url("images/background.png");
+    background-size: 100%;
+    background-position: center 90px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.navbar{
-    height:90px;
-    background:#fff;
-    border-top:3px solid #2ca7df;
+/* Navbar wrapper */
+.navbar {
+    height: 90px;
+    background: #fff;
+    border-top: 3px solid #2ca7df;
 }
 
-.container{
-    width:1200px;
-    height:100%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* Centers navbar content */
+.container {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo img{
-    height:70px;
+/* Logo size */
+.logo img {
+    height: 70px;
 }
 
-.menu{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
+/* Main navigation menu */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.menu > li{
-    position:relative;
+/* Menu item positioning for dropdowns */
+.menu > li {
+    position: relative;
 }
 
-.menu > li > a{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    padding:35px 0;
-    color:#17335C;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:600;
-    transition:.3s;
+/* Main navigation links */
+.menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 35px 0;
+    color: #17335C;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .3s;
 }
 
-.menu > li > a:hover{
-    color:#2ca7df;
+/* Hover effect for main links */
+.menu > li > a:hover {
+    color: #2ca7df;
 }
 
-.submenu{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:220px;
-    background:#fff;
-    list-style:none;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    z-index:1000;
+/* Dropdown submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    background: #fff;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    z-index: 1000;
 }
 
-.dropdown:hover > .submenu{
-    display:block;
+/* Show submenu on hover */
+.dropdown:hover > .submenu {
+    display: block;
 }
 
-.submenu li:not(:last-child){
-    border-bottom:1px solid #e5e7eb;
+/* Divider between submenu items */
+.submenu li:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.submenu li a{
-    display:block;
-    padding:16px 20px;
-    color:#17335C;
-    text-decoration:none;
-    font-weight:600;
+/* Submenu links */
+.submenu li a {
+    display: block;
+    padding: 16px 20px;
+    color: #17335C;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.submenu li a:hover{
-    background:#f5f7fb;
-    color:#2ca7df;
+/* Submenu hover effect */
+.submenu li a:hover {
+    background: #f5f7fb;
+    color: #2ca7df;
 }
 
-.mega-menu{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    width:650px;
-    background:#fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    padding:28px;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    z-index:1000;
+/* Mega menu dropdown */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 650px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    padding: 28px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    z-index: 1000;
 }
 
-.dropdown:hover > .mega-menu{
-    display:grid;
+/* Show mega menu on hover */
+.dropdown:hover > .mega-menu {
+    display: grid;
 }
 
-.mega-column h4{
-    color:#17335C;
-    font-size:18px;
-    margin-bottom:12px;
-    padding-bottom:10px;
-    border-bottom:2px solid #2ca7df;
+/* Mega menu headings */
+.mega-column h4 {
+    color: #17335C;
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2ca7df;
 }
 
-.mega-column a{
-    display:block;
-    padding:10px 0;
-    color:#17335C;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:600;
+/* Mega menu links */
+.mega-column a {
+    display: block;
+    padding: 10px 0;
+    color: #17335C;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
 }
 
-.mega-column a:hover{
-    color:#2ca7df;
+/* Mega menu hover effect */
+.mega-column a:hover {
+    color: #2ca7df;
 }
 
-.button{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:14px 24px;
-    background:#FB923C;
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    border-radius:8px;
-    transition:.3s;
+/* Orange call-to-action button */
+.button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    background: #FB923C;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: .3s;
 }
 
-.button:hover{
-    background:#F97316;
+/* Button hover effect */
+.button:hover {
+    background: #F97316;
 }
 
-.button i{
-    font-size:16px;
+/* Button icon size */
+.button i {
+    font-size: 16px;
+}
+
+/* ========================= */
+/* Phone / Mobile Version */
+/* ========================= */
+
+/* Hide mobile menu button on desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Phone version */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    /* Show hamburger button */
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: #17335C;
+        cursor: pointer;
+    }
+
+    /* Hide menu by default */
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    /* Show menu only when active */
+    .menu.active {
+        display: flex;
+    }
+
+    .menu > li {
+        width: 100%;
+    }
+
+    .menu > li > a {
+        width: 100%;
+        padding: 18px 0;
+        justify-content: space-between;
+        font-size: 20px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .submenu,
+    .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: #f9fafb;
+    }
+
+    .mega-menu {
+        padding: 15px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
