@@ -35,7 +35,10 @@ body {
 
 /* Logo size */
 .logo img {
-    height: 70px;
+    height: 55px;
+    position: relative;
+    left: -30px;
+    top: 4px;
 }
 
 /* Main navigation menu */
